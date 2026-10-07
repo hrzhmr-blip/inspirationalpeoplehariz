@@ -1,0 +1,410 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #151515;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ff5a36;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff5a36;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: #f7f7f5;
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.small-title {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #ff5a36;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 80px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ff5a36;
+}
+
+.hero-text > p:not(.small-title) {
+    max-width: 600px;
+    line-height: 1.8;
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 16px 28px;
+    background: #151515;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #ff5a36;
+    transform: translateY(-3px);
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    position: relative;
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BULATAN OREN = BELAKANG */
+.orange-circle {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    background: #ff5a36;
+    border-radius: 50%;
+
+    z-index: 1;
+}
+
+/* GAMBAR = DEPAN */
+.hero-image img {
+    position: relative;
+
+    width: 450px;
+    height: 320px;
+
+    object-fit: cover;
+
+    z-index: 2;
+}
+/* =========================
+   PEOPLE
+========================= */
+
+.people-section {
+    padding: 100px 8%;
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #ff5a36;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.section-title span {
+    color: #777;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+   
+    gap: 30px;
+}
+
+.card {
+    background: #f7f7f5;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+
+/* IMAGE */
+
+.person-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.person-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.card:hover .person-image img {
+    transform: scale(1.08);
+}
+
+
+/* CONTENT */
+
+.card-content {
+    padding: 30px;
+}
+
+.category {
+    display: inline-block;
+    color: #ff5a36;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.quote {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.bio {
+    color: #777;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.read-button {
+    text-decoration: none;
+    color: #151515;
+    font-weight: bold;
+    border-bottom: 2px solid #ff5a36;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.read-button:hover {
+    color: #ff5a36;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 120px 8%;
+    background: #151515;
+    color: white;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.about h2 span {
+    color: #ff5a36;
+}
+
+.about-content > p:last-child {
+    color: #bbb;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 8%;
+    background: #0d0d0d;
+    color: white;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .cards {
+        
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .about h2 {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .people-section {
+        padding: 70px 20px;
+    }
+
+    .hero-image .circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+}
+
+
+
